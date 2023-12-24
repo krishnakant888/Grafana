@@ -1,3 +1,4 @@
+cat <<EOF | kubectl apply -f -
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -12,3 +13,4 @@ spec:
     repoURL: https://prometheus-community.github.io/helm-charts
     targetRevision: 45.6.0
     chart: kube-prometheus-stack
+EOF
